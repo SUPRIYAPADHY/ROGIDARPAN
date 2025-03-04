@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogi Darpan - Patient Dashboard</title>
+    <link rel="stylesheet" href="/Rogi Darpan/patient dashboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="/Rogi Darpan/images/logo.jpeg" alt="Rogi Darpan Logo" class="logo">
+                <h1>Patient Dashboard</h1>
+            </div>
+            <nav>
+                <ul>
+                    <!-- <li><a href="/patient_management.html">Manage Patients</a></li>
+                    <li><a href="/face_scan.html">Face Scan</a></li> -->
+                    
+                    
+                    <li><a href="/Rogi Darpan/healthhistory.html">Health History</a></li>
+                    <li><a href="/Rogi Darpan/appointment.html">Appointment Booking</a></li>
+                    <li><a href="/Rogi Darpan/logout.html">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="dashboard">
+            <div class="profile-section">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img id="profile-pic" src="/Rogi Darpan/images/supriya.jpg" alt="Patient Profile Image">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="patient-details-header">Patient Details</h3>
+                        <h2>Supriya Padhy</h2>
+                        <p><strong>Blood Group:</strong> B+</p>
+                        <p><strong>Date of Birth:</strong> 03/05/1999</p>
+                        <p><strong>Contact:</strong> (123) 456-7890</p>
+                        <p><strong>Location:</strong> Odisha, INDIA</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="prescriptions">
+            <h2>Prescriptions</h2>
+            <input type="file" id="prescriptionUpload" accept=".pdf,.jpg,.png">
+            <div id="prescription-list"></div>
+        </section>
+    </div>
+    
+    <script>
+        document.getElementById("imageUpload").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("profile-pic").src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById("prescriptionUpload").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const fileURL = URL.createObjectURL(file);
+                const prescriptionList = document.getElementById("prescription-list");
+                const newEntry = document.createElement("div");
+                newEntry.innerHTML = `<p>${file.name} <a href="${fileURL}" target="_blank">View</a></p>`;
+                prescriptionList.appendChild(newEntry);
+            }
+        });
+    </script>
+</body>
+</html>

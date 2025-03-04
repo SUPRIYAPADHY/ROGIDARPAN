@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration</title>
+    <link rel="stylesheet" href="/Rogi Darpan/doct  registration.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/Rogi Darpan/images/logo.jpeg" alt="Rogi Darpan Logo">
+        </div>
+        <a href ="/Rogi Darpan/index.html">Home</a>
+    </nav>
+    <div class="container">
+        <h2>Doctor Registration</h2>
+        <form id="doctorForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+            
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <div class="face-scan">
+                <label>Face Scan:</label>
+                <video id="video" width="200" height="200" autoplay></video>
+                <button type="button" id="capture">Scan & Enroll</button>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already registered? <a href="/Rogi Darpan/doctorlogin.html">Login here</a></p>
+    </div>
+
+    </div>
+    </div>
+    <script src="/Rogi Darpan/doct registraion.js"></script>
+</body>
+</html>

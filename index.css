@@ -1,0 +1,150 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 50;
+}
+
+.navbar .logo {
+    width: 100px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('/Rogi Darpan/images/bg.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    color: rgb(7, 9, 12);
+    animation: floatBackground 10s infinite alternate ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes floatBackground {
+    0% {
+        background-position: center center;
+        transform: translateY(0px);
+    }
+    50% {
+        background-position: center top;
+        transform: translateY(-10px);
+    }
+    100% {
+        background-position: center center;
+        transform: translateY(0px);
+    }
+}
+
+.hero-section .content {
+    max-width: 800px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: fadeUp 2s ease-in-out;
+}
+
+.hero-section h4 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+    animation: fadeUp 2.5s ease-in-out;
+}
+
+.hero-section p {
+    font-size: 2.0rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+    animation: fadeUp 3s ease-in-out;
+}
+
+.welcome-btn {
+    background-color: #2a2840;
+    color: rgb(242, 244, 252);
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.welcome-btn:hover {
+    background-color: #322a48;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    /* background-color: rgb(125, 91, 161); */
+    background-color: #413b6c;
+    text-align: center;
+    padding:8px;
+    position: relative;
+    bottom: 0;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: rgb(16, 16, 16);
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #3d2f54;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

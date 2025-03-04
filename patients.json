@@ -1,0 +1,16 @@
+[
+    {
+        "name": "supriya",
+        "age": 21,
+        "blood_group": "O+",
+        "contact": "+1-555-1234",
+        "image": "images/supriya.jpg"
+    },
+    {
+        "name": "swarup",
+        "age":22,
+        "blood_group": "A+",
+        "contact": "+1-555-5678",
+        "image": "images/swarup.jpg"
+    }
+]

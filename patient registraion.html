@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="/Rogi Darpan/patient registration.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="/Rogi Darpan/images/logo.jpeg" alt="Rogi Darpan Logo">
+        </div>
+        <a href="/Rogi Darpan/index.html">Home</a>
+    </nav>
+
+    <div class="container">
+        <h2>Patient Registration</h2>
+        <form id="patientForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="aadhar">Aadhar No:</label>
+            <input type="text" id="aadhar" name="aadhar" required>
+
+            <label for="bloodGroup">Blood Group:</label>
+            <input type="text" id="bloodGroup" name="bloodGroup" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <div class="face-scan">
+                <label>Face Scan:</label>
+                <video id="video" width="200" height="200" autoplay></video>
+                <button type="button" id="capture">Scan & Enroll</button>
+                <canvas id="canvas" style="display: none;"></canvas>
+                <img id="capturedImage" style="display:none; width:200px; height:200px;"/>
+                <input type="hidden" id="faceData" name="faceData">
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+        <p>Already registered? <a href="/Rogi Darpan/patientlogin.html">Login here</a></p>
+    </div>
+
+    <script src="/Rogi Darpan/patient registration.js"></script>
+</body>
+</html>

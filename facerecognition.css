@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    background-image:url(images/bg.jpg) ;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #6a5acd;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button:hover {
+    background: #5a4dbd;
+}
+.patient-info {
+    margin-top: 20px;
+    display: none;
+    text-align: left;
+}
+.info-item {
+    font-size: 16px;
+    margin: 5px 0;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rogi Darpan - Login</title>
+    <link rel="stylesheet" href="/Rogi Darpan/patientlogin.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <header>
+                <img src="/Rogi Darpan/images/logo.jpeg" alt="Rogi Darpan Logo" class="logo">
+                <h1>Rogi Darpan</h1>
+            </header>
+            <h2>Hey, welcome!</h2>
+            <p>Please log in to continue.</p>
+            <form class="login-form" onsubmit="return validateForm()">
+                <div class="input-group password-group">
+                    <input type="text" id="loginInput" placeholder="Phone no / Aadhaar no." required class="input-style">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+                
+                <button type="submit" id="loginButton">Login</button>
+            </form>
+            <div class="extra-options">
+                <p><a href="/Rogi Darpan/forgetpw.html">Forget password?</a></p>
+                <p><a href="/Rogi Darpan/patient registraion.html">Create one</a></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            const loginInput = document.getElementById('loginInput').value;
+            const password = document.getElementById('password').value;
+            
+            const phoneRegex = /^[0-9]{10}$/; // Valid phone number (10 digits)
+            const aadhaarRegex = /^[0-9]{12}$/; // Valid Aadhaar number (12 digits)
+
+            if (!loginInput || !password) {
+                alert("Please fill in all required fields.");
+                return false;
+            }
+
+            if (!phoneRegex.test(loginInput) && !aadhaarRegex.test(loginInput)) {
+                alert("Please enter a valid Phone Number or Aadhaar Number.");
+                return false;
+            }
+
+            window.location.href = "/Rogi Darpan/patient dashboard.html";
+            return false;
+        }
+    </script>
+</body>
+</html>

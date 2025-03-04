@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background-image:url("images/bg.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #4b0082;
+    padding: 15px;
+}
+
+.navbar .logo {
+    width: 120px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: #4b0082;
+    margin: 20px 0;
+}
+
+.history-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.history-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.history-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.history-item h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.history-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.history-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4b0082;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.history-btn:hover {
+    background: #6a0dad;
+}

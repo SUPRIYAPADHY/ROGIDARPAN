@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition & Patient Data Retrieval</title>
+    <link rel="stylesheet" href="facerecognition.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Face Recognition & Patient Data Retrieval</h2>
+        <video id="video" autoplay></video>
+        <button onclick="scanFace()">Scan Face</button>
+        <div class="patient-info" id="patientInfo">
+            <h3>Patient Details</h3>
+            <p class="info-item"><strong>Name:</strong> <span id="name"></span></p>
+            <p class="info-item"><strong>Age:</strong> <span id="age"></span></p>
+            <p class="info-item"><strong>Blood Group:</strong> <span id="bloodGroup"></span></p>
+            <p class="info-item"><strong>Emergency Contact:</strong> <span id="contact"></span></p>
+            <p class="info-item"><strong>Past History:</strong> <span id="history"></span></p>
+        </div>
+    </div>
+    <script src="facerecognition.js"></script>
+</body>
+</html>

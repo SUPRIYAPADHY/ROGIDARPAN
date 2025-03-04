@@ -1,0 +1,27 @@
+{
+  "name": "rogi-darpan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "about.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SUPRIYAPADHY/Rogi-Darpan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SUPRIYAPADHY/Rogi-Darpan/issues"
+  },
+  "homepage": "https://github.com/SUPRIYAPADHY/Rogi-Darpan#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.1.0"
+  }
+}
